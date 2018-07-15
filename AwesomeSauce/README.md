@@ -1,4 +1,4 @@
-#File server
+# File server
 
 Implementation of webserver, that work without browser. Create file at folder 'root' near .dll and write your request
 only two types of request provided:
