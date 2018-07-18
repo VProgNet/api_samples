@@ -17,12 +17,13 @@ namespace BasicConfiguration
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("myConfig.json");
+                .AddJsonFile("myConfig.json")
+                .AddJsonFile("myAnotherConfig.json");
             Configuration = builder.Build();
-            foreach (var item in Configuration.AsEnumerable() )
-            {
-                Console.WriteLine($"Key: {item.Key} Value: {item.Value}");
-            }
-        }        
+            Console.WriteLine($"Foo: {Configuration["foo"]}");
+            Console.WriteLine($"Bar: {Configuration["bar"]}");
+            var bazSection = Configuration.GetSection("buz");
+            Console.WriteLine($"Baz:Foo: {bazSection["faa"]}");  
+        }
     }
 }
