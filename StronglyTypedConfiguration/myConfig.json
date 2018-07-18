@@ -1,0 +1,7 @@
+{
+    "foo": "value from foo",
+    "bar": "value from bar",
+    "baz" : {
+        "faz": "value from baz:faz"
+    }
+}
